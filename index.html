@@ -8,17 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
     rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.6.1.slim.js"
         integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nabla&family=Roboto:wght@300;400;700&display=swap');
+    </style>
+
 </head>
 <body>
     <main class="card">
-        <h1 class="card-header">Choose Your Scream</h1>
-        <form class="card-body" id="input-form">
+        <h1 class="card-header text-center bg-white">Choose Your Scream</h1>
+        <form class="card-body d-inline-flex justify-content-center" id="input-form">
             <select id="age-selection">
                 <option selected>Age Rating</option>
             </select>
-            <input placeholder="Keywords" id="keyword-input">
+            <input class="add-left-margin" placeholder="Keywords" id="keyword-input">
         </form>
     </main>
     <script src="assets/js/script.js"></script>
