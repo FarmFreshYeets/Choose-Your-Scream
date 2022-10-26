@@ -1,13 +1,12 @@
-var requestURL = 'https://imdb-api.com/en/API/SearchMovie/k_alvf6u1h/inception 2010';
+// var watchMovie = $('#') // var newMovie = $('input[name="movie-input"]').val();
 
 function getApi() {
-    var requestURL = ('https://imdb-api.com/en/API/SearchMovie/k_alvf6u1h/inception 2010');
-    fetch(requestUrl)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        });
-}
+    var imbdApiURL = 'https://imdb-api.com/en/API/SearchMovie/k_alvf6u1h';
 
+    fetch(imbdApiURL)
+    .then(function(response){
+        return response.json();
+    })
+}
+getApi()
+// searchButton.addEventListener("click", searchMovie);
