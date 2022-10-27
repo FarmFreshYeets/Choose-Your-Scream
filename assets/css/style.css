@@ -25,3 +25,13 @@ body {
 .add-left-margin {
     margin-left: 20px;
 }
+
+.border-rad {
+    border-radius: 4px;
+    border: 1px solid gray;
+}
+
+.dropdown {
+    background-color: rgb(255, 200, 0);
+    border-radius: 4px;
+}
