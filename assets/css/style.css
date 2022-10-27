@@ -26,6 +26,21 @@ body {
     margin-left: 20px;
 }
 
+.recipe-card {
+    text-align: center;
+    align-items: center;
+}
+
+.food-input {
+    width: 50%;
+    place-self: center;
+}
+
+.search-btn {
+    width: 25%;
+    place-self: center;
+}
+
 .border-rad {
     border-radius: 4px;
     border: 1px solid gray;
