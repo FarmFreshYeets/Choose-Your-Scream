@@ -25,3 +25,9 @@ body {
 .add-left-margin {
     margin-left: 20px;
 }
+#searchButton{
+margin-left: 5px;
+padding: auto;
+    color: black;
+    background-color: rgb(75, 75, 135);
+}
