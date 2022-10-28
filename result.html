@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Result</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.6.1.slim.js"
         integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
@@ -16,18 +17,26 @@
        <div class="card btn">
             <h3>Movie 1</h3>
             <p>Movie description</p>
-            <div class="card" id="">Food recipe</div>
         </div>
         <div class="card btn">
             <h2>Movie 2</h2>
             <p>Movie description</p>
-            <div class="card" id="">Food recipe</div>
         </div>
         <div class="card btn">
             <h2>Movie 3</h2>
             <p>Movie description</p>
-            <div class="card" id="">Food recipe</div>
         </div>
     </main>
+    <section class="card recipe-card">
+        <h2>Food Recommendation</h2>
+        <input type="text" id="food-keyword" class="food-input">
+        <button class="search-btn">Search</button>
+        <div>
+            <h3>Name of dish</h3>
+            <img src="http://via.placeholder.com/640x360" alt="placeholder image">
+            <p>Recipe: </p>
+        </div>
+    </section>
 </body>
+<script src="./assets/js/results.js"></script>
 </html>
