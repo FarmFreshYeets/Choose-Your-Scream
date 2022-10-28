@@ -15,10 +15,10 @@
 
 </head>
 <body>
-    <main class="container">
-        <h1 class="">Choose Your Scream</h1>
-        <form class="" id="input-form">
-            <select class="" id="age-selection">
+    <main class="card main-card">
+        <h1 class="card-header text-center bg-white">Choose Your Scream</h1>
+        <form class="card-body d-inline-flex justify-content-center" id="input-form">
+            <select class="dropdown" id="age-selection">
                 <option selected>Age Rating</option>
                 <option value="G">G (All Audiences)</option>
                 <option value="PG">PG (10+)</option>
@@ -27,8 +27,9 @@
                 <option value="NC-17">NC-17 (None Under 17)</option>
             </select>
             <input class="add-left-margin border-rad" placeholder="Keywords" id="keyword-input">
+            <button class="btn btn-success" id="search-btn">Search</button>
         </form>
     </main>
-    <script src="assets/js/homepage.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
