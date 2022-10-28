@@ -5,36 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.6.1.slim.js"
         integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
-        <h1 class="card-header">Your Movie Recommendations</h1>
+        <h1 class="card card-header-title has-background-white is-size-3">Your Movie Recommendations</h1>
        <h2 id="movieName"></h2>
-       <div class="card btn">
-            <h3>Movie 1</h3>
-            <p>Movie description</p>
+       <div class="card is-flex">
+            <img src="http://via.placeholder.com/105x200" alt="" class="card-image m-5">
+            <div class="card-content m-3">
+                <h3 class="card-header-title p-2">Movie 1</h3>
+                <p class="card-content p-2">Movie description</p>
+            </div>
         </div>
-        <div class="card btn">
-            <h2>Movie 2</h2>
-            <p>Movie description</p>
+        <div class="card is-flex">
+            <img src="http://via.placeholder.com/105x200" alt="" class="card-image m-5">
+            <div class="card-content m-3">
+                <h3 class="card-header-title p-2">Movie 2</h3>
+                <p class="card-content p-2">Movie description</p>
+            </div>
         </div>
-        <div class="card btn">
-            <h2>Movie 3</h2>
-            <p>Movie description</p>
+        <div class="card is-flex">
+            <img src="http://via.placeholder.com/105x200" alt="" class="card-image m-5">
+            <div class="card-content m-3">
+                <h3 class="card-header-title p-2">Movie 3</h3>
+                <p class="card-content p-2">Movie description</p>
+            </div>
         </div>
     </main>
     <section class="card recipe-card">
-        <h2>Food Recommendation</h2>
-        <input type="text" id="food-keyword" class="food-input">
-        <button class="search-btn">Search</button>
+        <h2 class="card-header-title is-size-4 level-item">Food Recommendation</h2>
+        <div class="card-content p-0">
+            <input type="text" placeholder="Food input" id="food-keyword" class="food-input">
+            <button class="search-btn">Search</button>
+        </div>
         <div>
-            <h3>Name of dish</h3>
+            <h3 class="card-header-title level-item">Name of dish</h3>
             <img src="http://via.placeholder.com/640x360" alt="placeholder image">
-            <p>Recipe: </p>
+            <div>
+                <h3 class="card-header-title level-item">Recipe: </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida neque ex. Aenean mollis tristique lorem, non lobortis elit ornare sit amet. Quisque non sagittis massa. Mauris eget dolor placerat quam egestas semper. Nulla facilisi. Quisque non felis scelerisque, pharetra odio aliquet, porta ligula. Suspendisse non imperdiet turpis, ut pulvinar mauris. Proin dapibus sollicitudin dui id commodo. Donec sit amet purus quis ipsum malesuada rutrum. Proin pulvinar urna ultrices facilisis vulputate. Quisque consectetur mattis lectus ac porta. Proin non vulputate tortor.</p>
+            </div>
         </div>
     </section>
 </body>

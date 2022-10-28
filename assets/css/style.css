@@ -46,13 +46,15 @@ html {
 }
 
 .food-input {
-    width: 50%;
+    width: 25%;
     place-self: center;
+    padding: 3px;
 }
 
 .search-btn {
     width: 25%;
     place-self: center;
+    padding: 3px;
 }
 
 .border-rad {
