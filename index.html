@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Your Scream</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style-index.css">
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.6.1.slim.js"
         integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
     <style>
@@ -15,20 +15,35 @@
 
 </head>
 <body>
-    <main class="card main-card">
-        <h1 class="card-header text-center bg-white main-header">Choose Your Scream</h1>
-        <form class="card-body form-card" id="input-form">
-            <select class="dropdown" id="age-selection">
-                <option selected>Age Rating</option>
-                <option value="G">G (All Audiences)</option>
-                <option value="PG">PG (10+)</option>
-                <option value="PG-13">PG-13 (13+)</option>
-                <option value="R">R (17+)</option>
-                <option value="NC-17">NC-17 (None Under 17)</option>
-            </select>
-            <input class="add-left-margin border-rad" placeholder="Keywords" id="keyword-input">
-            <button class="btn btn-success " id="search-btn">Search</button>
-        </form>
+    <nav class="hero center">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-3">Choose Your Screen</h1>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="container">
+            <form class="box columns is-centered" id="input-form">
+                <div class="column is-3 center">
+                    <div class="select is-link">
+                        <select id="age-selection">
+                            <option selected>Age Rating</option>
+                            <option value="G">G (All Audiences)</option>
+                            <option value="PG">PG (10+)</option>
+                            <option value="PG-13">PG-13 (13+)</option>
+                            <option value="R">R (17+)</option>
+                            <option value="NC-17">NC-17 (None Under 17)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="column is-3 center">
+                    <input class="input" placeholder="Keywords" id="keyword-input">
+                    <button class="button is-warning" id="search-btn">Search</button>
+                </div>
+            </form>
+        </div>
     </main>
     <script src="./assets/js/script.js"></script>
 </body>
