@@ -1,0 +1,32 @@
+/* 
+Google Font API ref sheet:
+font-family: 'Nabla', cursive;
+font-family: 'Roboto', sans-serif;
+
+Font weights:
+Nabla-400
+Roboto-300,400,700
+*/
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Nabla', cursive;
+}
+
+html {
+    background-color: #202C59;
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
