@@ -2,17 +2,6 @@ var edamamApiUrl = 'https://api.edamam.com/api/recipes/v2?type=public&q='
 var foodKeyword = $('#food-keyword') // '#food-keyword' does not currently exist
 var imdbRequestUrl = localStorage.getItem('queryUrl')
 
-function foodSearch(searchKeyword) {
-    var requestUrl = edamamApiUrl + searchKeyword + '&app_id=ec3b9d99&app_key=5c1cf51a327c141221f933d66d93d0d6'
-
-    fetch(requestUrl)
-        .then(function (response) {
-           return response.json()
-        })
-        .then(function (data) {
-            console.log(data)
-        })
-}
 
 function getApi(x) {
     fetch(x).then(function (response) {
@@ -33,3 +22,30 @@ function getApi(x) {
 }
 
 getApi(imdbRequestUrl)
+
+var foodInput = {
+    apiKey: '5c1cf51a327c141221f933d66d93d0d6',
+    foodSearch: function (searchKeyword) {
+        fetch(edamamApiUrl + searchKeyword + '&app_id=ec3b9d99&app_key=' + this.apiKey,)
+        .then((response) => response.json())
+        .then((data) => this.displayRecipe(data));
+    },
+
+    displayRecipe: function(data) {
+        var { label, image, ingredientLines, url }  = data.hits[0].recipe;
+        console.log(label,image,ingredientLines,url);
+        document.querySelector("#dish-title").innerText = label;
+        document.querySelector("#dish-image").src = image;
+        document.querySelector("#ingredients").innerText = "Ingredients: " + ingredientLines
+        document.querySelector("#recipe-link").innerText = url;
+    },
+
+    search: function() {
+        this.foodSearch(document.querySelector(".food-input").value);
+    }
+};
+
+document.querySelector("#search-btn").addEventListener("click", function() {
+    foodInput.search();
+});
+
