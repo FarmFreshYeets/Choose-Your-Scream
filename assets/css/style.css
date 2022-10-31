@@ -11,7 +11,6 @@ Roboto-300,400,700
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    margin: 1rem 7rem;
 }
 
 h1 {
@@ -65,4 +64,8 @@ html {
 .dropdown {
     background-color: rgb(255, 200, 0);
     border-radius: 4px;
+}
+
+.is-gold {
+    color: gold;
 }
