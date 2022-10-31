@@ -1,7 +1,7 @@
 var edamamApiUrl = 'https://api.edamam.com/api/recipes/v2?type=public&q='
 var foodKeyword = $('#food-keyword') // '#food-keyword' does not currently exist
 var imdbRequestUrl = localStorage.getItem('queryUrl')
-
+var foodForm = document.getElementById('food-form')
 
 function getApi(x) {
     fetch(x).then(function (response) {
@@ -44,6 +44,10 @@ var foodInput = {
         this.foodSearch(document.querySelector(".food-input").value);
     }
 };
+
+foodForm.addEventListener('submit', function(event) {
+    event.preventDefault()
+})
 
 document.querySelector("#search-btn").addEventListener("click", function() {
     foodInput.search();
