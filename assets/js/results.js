@@ -7,9 +7,9 @@ function getApi(x) {
     fetch(x).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                var movie1 = Math.floor(Math.random() * 50)
-                var movie2 = Math.floor(Math.random() * 50)
-                var movie3 = Math.floor(Math.random() * 50)
+                var movie1 = Math.floor(Math.random() * data.results.length)
+                var movie2 = Math.floor(Math.random() * data.results.length)
+                var movie3 = Math.floor(Math.random() * data.results.length)
                 localStorage.setItem('movie-name1', data.results[movie1].title)
                 localStorage.setItem('movie-name2', data.results[movie2].title)
                 localStorage.setItem('movie-name3', data.results[movie3].title)
