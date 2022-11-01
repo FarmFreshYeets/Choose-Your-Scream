@@ -72,6 +72,10 @@ html {
 
 .center {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+.margin-bottom{
+    margin-bottom: 1rem;
 }
