@@ -1,34 +1,34 @@
 # Steamin' and Streamin'
 
 ## Description
- As a fan of movies and food, I want to be able to go to a fun and functioning 
- 
- website where I can get movie recommendations by searching a keyword, and then 
- 
- a random selection of movies appear referring to that keyword.  Underneath the movie 
- 
- results is another search area where you can then put in another keyword, and a random 
- 
- recipe will appear at the bottom of the page that you can make and enjoy while 
- 
- watching your movie.
+As a fan of movies and food, I want to be able to go to a fun and functioning 
 
- ## Technologies
- * HTML
- * CSS
- * JavaScript
- * Bulma
- * jQuery
- * IMBD
- * Edemam
- * Google Font
+website where I can get movie recommendations by searching a keyword, and then 
 
- ## Usage
- WHEN I open the website, 
+a random selection of movies appear referring to that keyword.  Underneath the movie 
  
- THEN you'll be prompted to enter your age rating
+results is another search area where you can then put in another keyword, and a random 
+ 
+recipe will appear at the bottom of the page that you can make and enjoy while 
+ 
+watching your movie.
 
- THEN add a keyword to bring up the movie recommendations
+## Technologies
+* HTML
+* CSS
+* JavaScript
+* Bulma
+* jQuery
+* IMBD
+* Edemam
+* Google Font
+
+## Usage
+WHEN I open the website, 
+ 
+THEN you'll be prompted to enter your age rating
+
+THEN add a keyword to bring up the movie recommendations
 
 WHEN you click "enter/return"
 
