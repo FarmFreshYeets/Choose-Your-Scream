@@ -1,5 +1,5 @@
 var edamamApiUrl = 'https://api.edamam.com/api/recipes/v2?type=public&q='
-var foodKeyword = $('#food-keyword') // '#food-keyword' does not currently exist
+var foodKeyword = $('#food-keyword')
 var imdbRequestUrl = localStorage.getItem('queryUrl')
 var foodForm = document.getElementById('food-form')
 var modal = $('#error')
@@ -14,15 +14,18 @@ function getApi(x) {
         if (response.ok) {
             response.json().then(function (data) {
                 console.log(data)
+                // gives the user an error message in the form of a modal that tells them what went wrong
                 if (data.errorMessage) {
                     modalContent.text('Sorry for the inconvience but we have reached our maximum requests for today! We will display previous results if able. Try again tomorrow for more results!')
                     modalClose.attr('class', 'button is-warning is-light')
                     modalBttn.attr('class', 'button is-danger is-light is-hidden')
                     notif.attr('class', 'notification is-light is-info')
                     openModal()
+                // in case the user's keyword did not get any results, display a different error message modal
                 } else if (data.results.length == 0){
                     modalContent.text('Oops! That keyword and age rating did not have any results! Please try again!')
                 } else {
+                    // randomly choose 3 movies from the list and then set localStorage keys with values of the movies' titles, plot description, and image url.
                     var movie1 = Math.floor(Math.random() * data.results.length)
                     var movie2 = Math.floor(Math.random() * data.results.length)
                     var movie3 = Math.floor(Math.random() * data.results.length)
@@ -37,6 +40,7 @@ function getApi(x) {
                     localStorage.setItem('movie-img3', data.results[movie3].image)
                 }
             }).then(function () {
+                // after all of those values have been set in local storage, display them on the movie cards in result.html
                 $('#movie-1').text(localStorage.getItem('movie-name1'))
                 $('#movie-2').text(localStorage.getItem('movie-name2'))
                 $('#movie-3').text(localStorage.getItem('movie-name3'))
@@ -51,9 +55,10 @@ function getApi(x) {
     })
 
 }
-
+// call this function with the requestUrl from script.js when the page loads
 getApi(imdbRequestUrl)
 
+// takes a user keyword input for food and displays a meal with the necessary ingredients and a link to the recipe 
 var foodInput = {
     apiKey: '5c1cf51a327c141221f933d66d93d0d6',
     foodSearch: function (searchKeyword) {
@@ -63,6 +68,7 @@ var foodInput = {
     },
 
     displayRecipe: function (data) {
+        // this var splits up the data from the fetch into variables that we can plug into the result.html page
         var { label, image, ingredientLines, url } = data.hits[0].recipe;
         document.querySelector("#dish-title").innerText = label;
         document.querySelector("#dish-image").src = image;
