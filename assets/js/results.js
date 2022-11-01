@@ -64,11 +64,11 @@ var foodInput = {
 
     displayRecipe: function (data) {
         var { label, image, ingredientLines, url } = data.hits[0].recipe;
-        console.log(label, image, ingredientLines, url);
         document.querySelector("#dish-title").innerText = label;
         document.querySelector("#dish-image").src = image;
         document.querySelector("#ingredients").innerText = "Ingredients: " + ingredientLines
         document.querySelector("#recipe-link").innerText = url;
+        document.querySelector("#recipe-link").href = url;
     },
 
     search: function () {
