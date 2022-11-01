@@ -11,58 +11,76 @@
         integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main>
+    <main class="margin-bottom">
         <nav class="hero center">
-            <div class="hero-body">
+            <div class="hero-body center">
                 <div class="container">
                     <h1 class="title is-4 is-gold">Your Movie Recommendations</h1>
                 </div>
             </div>
         </nav>
        <h2 id="movieName"></h2>
+       
        <div class="container">
-            <div class="columns">
-                <div class="column box">
-                     <img src="http://via.placeholder.com/105x200" alt="" class="card-image m-5" id="movie-img-1">
-                     <div class="card-content m-3">
-                         <h3 id="movie-1" class="card-header-title p-2">Movie 1</h3>
-                         <p id="movie-description-1" class="card-content p-2">Movie description</p>
-                     </div>
-                 </div>
-            </div>
-            <div class="columns">
-                <div class="column box">
-                    <img src="http://via.placeholder.com/105x200" alt="" class="card-image m-5"id="movie-img-2">
-                    <div class="card-content m-3">
-                        <h3 id="movie-2" class="card-header-title p-2">Movie 2</h3>
-                        <p id="movie-description-2" class="card-content p-2">Movie description</p>
-                    </div>
+            <div class="columns is-mobile notification is-link">
+                <div class="column is-one-fifth">
+                    <h3 id="movie-1" class=" title is-4 is-size-6-mobile"></h3>
                 </div>
-            </div>
-            <div class="columns">
-                <div class="column box">
-                    <img src="http://via.placeholder.com/105x200" alt="" class="card-image m-5" id="movie-img-3">
-                    <div class="card-content m-3">
-                        <h3 id="movie-3" class="card-header-title p-2">Movie 3</h3>
-                        <p id="movie-description-3" id="" class="card-content p-2">Movie description</p>
-                    </div>
+                <div class="column is-three-fifths">
+                    <p id="movie-description-1" class="box"></p>
                 </div>
+                <figure class="column image is-320x480">
+                    <img src="http://via.placeholder.com/105x200" alt="" id="movie-img-1">
+                </figure>
+            </div>
+
+            <div class="columns is-mobile notification is-info">
+                <div class="column is-one-fifth">
+                    <h3 id="movie-2" class="title is-4 is-4 is-size-6-mobile"></h3>
+                </div>
+                <div class="column is-three-fifths">
+                    <p id="movie-description-2" class="box"></p>
+                </div>
+                <figure class="column image is-320x480">
+                    <img src="http://via.placeholder.com/105x200" alt="" id="movie-img-2">
+                </figure>
+            </div>
+
+            <div class="columns is-mobile notification is-primary">
+                <div class="column is-one-fifth">
+                    <h3 id="movie-3" class="title is-4 is-4 is-size-6-mobile"></h3>
+                </div>
+                <div class="column is-three-fifths">
+                    <p id="movie-description-3" id="" class="box"></p>
+                </div>
+                <figure class="column image is-320x480">
+                    <img src="http://via.placeholder.com/105x200" alt="" id="movie-img-3">
+                </figure>
             </div>
        </div>
 
     </main>
-    <section class="card recipe-card">
-        <h2 class="card-header-title is-size-4 level-item">Food Recommendation</h2>
-        <form class="card-content p-0" id="food-form">
-            <input type="text" placeholder="Food input" id="food-keyword" class="food-input">
-            <button class="search-btn" id="search-btn">Search</button>
-        </form>
-        <div>
-            <h3 class="card-header-title level-item" id="dish-title">Name of dish</h3>
-            <img src="" alt="" id="dish-image">
+
+    <section class="container">
+        <div class="box">
+            <h2 class="card-header-title is-size-4 level-item">Food Recommendation</h2>
+            <div class="columns center">
+                <form class="column is-two-thirds center" id="food-form">
+                    <input type="text" style="width:50%;" placeholder="Food input" id="food-keyword" class="input food-input">
+                    <button class="button is-success" style="width:50%;" id="search-btn">Search</button>
+                </form>
+            </div>
             <div>
-                <h3 class="card-header-title level-item" id="ingredients"></h3>
-                <p class="pb-4">View full recipe at <a href="" class="m-0" id="recipe-link"></a></p>
+                <h3 class="card-header-title level-item" id="dish-title">Name of dish</h3>
+                <div class="columns">
+                    <div class="column center">
+                        <img src="" alt="" id="dish-image">
+                    </div>
+                </div>
+                <div>
+                    <h3 class="card-header-title level-item" id="ingredients"></h3>
+                    <p class="pb-4">View full recipe at <a href="" class="m-0" id="recipe-link"></a></p>
+                </div>
             </div>
         </div>
     </section>

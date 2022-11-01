@@ -69,3 +69,13 @@ html {
 .is-gold {
     color: gold;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-bottom{
+    margin-bottom: 1rem;
+}
