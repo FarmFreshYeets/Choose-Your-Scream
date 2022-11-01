@@ -2,23 +2,40 @@ var edamamApiUrl = 'https://api.edamam.com/api/recipes/v2?type=public&q='
 var foodKeyword = $('#food-keyword') // '#food-keyword' does not currently exist
 var imdbRequestUrl = localStorage.getItem('queryUrl')
 var foodForm = document.getElementById('food-form')
+var modal = $('#error')
+var modalBttn = $('#error-bttn')
+var modalContent = $('#modal-content')
+var modalClose = $('#close-modal')
+var notif = $('#notif')
+var bttnRedirect = './index.html'
 
 function getApi(x) {
     fetch(x).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                var movie1 = Math.floor(Math.random() * data.results.length)
-                var movie2 = Math.floor(Math.random() * data.results.length)
-                var movie3 = Math.floor(Math.random() * data.results.length)
-                localStorage.setItem('movie-name1', data.results[movie1].title)
-                localStorage.setItem('movie-name2', data.results[movie2].title)
-                localStorage.setItem('movie-name3', data.results[movie3].title)
-                localStorage.setItem('movie-desc1', data.results[movie1].plot)
-                localStorage.setItem('movie-desc2', data.results[movie2].plot)
-                localStorage.setItem('movie-desc3', data.results[movie3].plot)
-                localStorage.setItem('movie-img1', data.results[movie1].image)
-                localStorage.setItem('movie-img2', data.results[movie2].image)
-                localStorage.setItem('movie-img3', data.results[movie3].image)
+                console.log(data)
+                if (data.errorMessage) {
+                    modalContent.text('Sorry for the inconvience but we have reached our maximum requests for today! We will display previous results if able. Try again tomorrow for more results!')
+                    modalClose.attr('class', 'button is-warning is-light')
+                    modalBttn.attr('class', 'button is-danger is-light is-hidden')
+                    notif.attr('class', 'notification is-light is-info')
+                    openModal()
+                } else if (data.results.length == 0){
+                    modalContent.text('Oops! That keyword and age rating did not have any results! Please try again!')
+                } else {
+                    var movie1 = Math.floor(Math.random() * data.results.length)
+                    var movie2 = Math.floor(Math.random() * data.results.length)
+                    var movie3 = Math.floor(Math.random() * data.results.length)
+                    localStorage.setItem('movie-name1', data.results[movie1].title)
+                    localStorage.setItem('movie-name2', data.results[movie2].title)
+                    localStorage.setItem('movie-name3', data.results[movie3].title)
+                    localStorage.setItem('movie-desc1', data.results[movie1].plot)
+                    localStorage.setItem('movie-desc2', data.results[movie2].plot)
+                    localStorage.setItem('movie-desc3', data.results[movie3].plot)
+                    localStorage.setItem('movie-img1', data.results[movie1].image)
+                    localStorage.setItem('movie-img2', data.results[movie2].image)
+                    localStorage.setItem('movie-img3', data.results[movie3].image)
+                }
             }).then(function () {
                 $('#movie-1').text(localStorage.getItem('movie-name1'))
                 $('#movie-2').text(localStorage.getItem('movie-name2'))
@@ -67,3 +84,18 @@ document.querySelector("#search-btn").addEventListener("click", function () {
     foodInput.search();
 });
 
+modalBttn.click(function(event){
+    location.assign(bttnRedirect)
+})
+
+function openModal() {
+    modal.addClass('is-active')
+}
+
+function closeModal() {
+    modal.attr('class', 'modal')
+}
+
+modalClose.click(function(event){
+    closeModal()
+})
