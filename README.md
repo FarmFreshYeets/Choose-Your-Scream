@@ -1,66 +1,26 @@
 # Steamin' and Streamin'
 
 ## Description
-As a fan of movies and food, I want to be able to go to a fun and functioning 
+The goal of this project was to collaborate with a team to create an application that allows a user to find randomly generated movies based on a keyword input and find a food recipe based on another keyword input. This was accomplished with the use of APIs from IMDB for movie information and Edamam for food recipes. While developing this application, our team was able to strengthen our communication and task delegation skills.
 
-website where I can get movie recommendations by searching a keyword, and then 
-
-a random selection of movies appear referring to that keyword.  Underneath the movie 
- 
-results is another search area where you can then put in another keyword, and a random 
- 
-recipe will appear at the bottom of the page that you can make and enjoy while 
- 
-watching your movie.
-
-## Technologies
-* HTML
-* CSS
-* JavaScript
-* Bulma
-* jQuery
-* IMBD
-* Edemam
-* Google Font
+## Installation
+Click this link to view the deployed website: https://farmfreshyeets.github.io/Steamin-And-Streamin/
 
 ## Usage
-WHEN I open the website, 
- 
-THEN you'll be prompted to enter your age rating
+To use this application, select an age rating from the dropdown menu and input a keyword. If a keyword and and age rating pair have search results, you will see 3 randomly chosen movies and their plot descriptions. If you scroll down in the results page, you will see a space to input another keyword for a food recipe.
 
-THEN add a keyword to bring up the movie recommendations
-
-WHEN you click "enter/return"
-
-THEN an eventListener takes affect and the results page will appear
-
-WHEN the results page appears, a list of 3 recommended movies pop up, and 
-
-underneath the recommendations, the random recipe will appear, with a recipe on 
-
-how to make it.
-
-THEN you choose which flick to watch, 
-
-and enjoy your steamin' "meal" while you're streamin' your film!
-
-[def]: assets/images/screenshot.png
-[def]: assets/images/screenshot.png
+![Search Page](/assets/images/Screenshot(38).png)
+![Results Page](/assets/images/Screenshot_141.png)
 
 ## Credits
-Project collaboratos:
+Bulma:
+https://bulma.io/documentation/
 
-Camden Van Sciver 
-https://github.com/FarmFreshYeets
+IMDB API:
+https://imdb-api.com/API
 
-Marquise Gordon 
-https://github.com/marquisegordon
-
-Joseph Simmerman 
-https://github.com/FruityOkapi
-
-Jacquelyn Pulliam 
-https://github.com/JacquieSue
+Edamam API:
+https://developer.edamam.com/recipe-demo
 
 ## License
 MIT License
