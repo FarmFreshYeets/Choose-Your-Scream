@@ -9,7 +9,7 @@ Click this link to view the deployed website: https://farmfreshyeets.github.io/S
 ## Usage
 To use this application, select an age rating from the dropdown menu and input a keyword. If a keyword and and age rating pair have search results, you will see 3 randomly chosen movies and their plot descriptions. If you scroll down in the results page, you will see a space to input another keyword for a food recipe.
 
-![Search Page](/assets/images/Screenshot(38).png)
+![Search Page](/assets/images/Screenshot_(38).png)
 ![Results Page](/assets/images/Screenshot_141.png)
 
 ## Credits
